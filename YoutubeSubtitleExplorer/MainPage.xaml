@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:YoutubeSubtitleExplorer.Pages"
+            x:Class="YoutubeSubtitleExplorer.MainPage">
+    
+    <NavigationPage Title="Search Videos">
+        <x:Arguments>
+            <local:SearchVideosPage />
+        </x:Arguments>
+        <NavigationPage.IconImageSource>
+            <FontImageSource
+                Color="{AppThemeBinding Dark={OnPlatform Android={StaticResource TextColorDark}, iOS=Default, Default=Default},
+                    Light={OnPlatform Android={StaticResource TextColorDark}, iOS=Default, Default=Default}}"
+                FontFamily="FontAwesomeSolid"
+                Glyph=""
+                Size="20"
+            />
+        </NavigationPage.IconImageSource>
+    </NavigationPage>
+
+    <NavigationPage Title="Settings">
+        <x:Arguments>
+            <local:SettingsPage />
+        </x:Arguments>
+        <NavigationPage.IconImageSource>
+            <FontImageSource
+                Color="{AppThemeBinding Dark={OnPlatform Android={StaticResource TextColorDark}, iOS=Default, Default=Default},
+                    Light={OnPlatform Android={StaticResource TextColorDark}, iOS=Default, Default=Default}}"
+                FontFamily="FontAwesomeSolid"
+                Glyph=""
+                Size="20"
+            />
+        </NavigationPage.IconImageSource>
+    </NavigationPage>
+
+</TabbedPage>
